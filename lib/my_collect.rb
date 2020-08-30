@@ -1,12 +1,9 @@
 def my_collect(array)
   i = 0
-  first_names = []
+  collect = []
   while i < array.length
-    my_collect(array) do |name|
-      name.split(" ").first
+collect<<(yield(array[i]))
+i+=1
     end
-      first_names<<yield(array)
-      i += 1
-    end
-  first_names
+  collect
 end
