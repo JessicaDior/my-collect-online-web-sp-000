@@ -4,7 +4,7 @@ def my_collect(array)
     my_collect(array) do |name|
       name.split(" ").first
     end
-      first_names<<yield
+      first_names<<yield(array)
     end
   first_names
 end
